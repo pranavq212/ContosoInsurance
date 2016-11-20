@@ -52,11 +52,14 @@ namespace ContosoInsurance.MVC.Controllers
         }
 
         [HttpGet, Route("details/{id}")]
-        public async Task<ActionResult> Details(int id)
+        public async Task<ActionResult> Details(int? id)
         {
+            if (id == null) return RedirectToAction("Index");
+
             var queryable = dbContext.Claims.Include(i => i.Vehicle.Customer)
                                         .Where(i => i.Id == id);
             var claim = await queryable.FirstOrDefaultAsync();
+            if (claim == null) return HttpNotFound();
 
 
             var vehicle = claim.Vehicle;
