@@ -159,7 +159,7 @@
         {
           "type": "firewallRules",
           "kind": "v12.0",
-          "name": "AllowAllWindowsAzureIps",
+          "name": "AllowAllInternalIps",
           "apiVersion": "2014-04-01-preview",
           "location": "West US",
           "properties": {
