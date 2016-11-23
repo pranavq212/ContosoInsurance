@@ -1,0 +1,21 @@
+---
+description: Hello World
+---
+
+{% capture welcome_content %} {% include welcome.md %} {% endcapture %}
+
+<section>
+    {{ welcome_content |  markdownify }}
+</section>
+
+<section id="documents">
+    {% for item in site.data.downloads %}
+
+    {% endfor %}
+</section>
+
+<section>
+    {% for member in site.data.members %}
+
+    {% endfor %}
+</section>
