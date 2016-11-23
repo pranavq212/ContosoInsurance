@@ -203,6 +203,16 @@ publish/
 !**/packages/build/
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
+# JavaScript Packages
+**/Scripts/bootstrap*.js
+**/fonts/glyphicons*
+**/Content/bootstrap*.css
+**/Content/*.map
+**/Scripts/jquery*.js
+**/Scripts/*.map
+**/Scripts/modernizr*.js
+**/Scripts/respond*.js
+
 
 # Microsoft Azure Build Output
 csx/

@@ -218,6 +218,8 @@
     <Compile Include="Utils\BlobUtil.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\contoso-detail.css" />
@@ -235,8 +237,13 @@
     <Content Include="fonts\Roboto-Regular-webfont.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="deploy.cmd" />
+    <Content Include="fonts\Helvetica-Neue-LT-Std.eot" />
+    <Content Include="fonts\Helvetica-Neue-LT-Std.ttf" />
+    <Content Include="fonts\Helvetica-Neue-LT-Std.woff" />
+    <Content Include="fonts\Roboto-Bold-webfont.eot" />
+    <Content Include="fonts\Roboto-Bold-webfont.ttf" />
+    <Content Include="fonts\Roboto-Bold-webfont.woff" />
     <Content Include="fonts\Roboto-Light-webfont.eot" />
     <Content Include="fonts\Roboto-Light-webfont.ttf" />
     <Content Include="fonts\Roboto-Light-webfont.woff" />
@@ -246,29 +253,24 @@
     <Content Include="fonts\Roboto-Regular-webfont.eot" />
     <Content Include="fonts\Roboto-Regular-webfont.ttf" />
     <Content Include="fonts\Roboto-Regular-webfont.woff" />
-    <Content Include="fonts\Roboto-Bold-webfont.eot" />
-    <Content Include="fonts\Roboto-Bold-webfont.ttf" />
-    <Content Include="fonts\Roboto-Bold-webfont.woff" />
-    <Content Include="deploy.cmd" />
-    <Content Include="fonts\Helvetica-Neue-LT-Std.eot" />
-    <Content Include="fonts\Helvetica-Neue-LT-Std.ttf" />
-    <Content Include="fonts\Helvetica-Neue-LT-Std.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Properties\PublishProfiles\contosoinsurance - Web Deploy.pubxml" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\contoso-detail.js" />
     <Content Include="Scripts\contoso-search.js" />
     <Content Include="Scripts\geoHelper.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-3.4.0.debug.js" />
-    <Content Include="Scripts\knockout-3.4.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -309,17 +311,14 @@
     <Content Include="Views\Claims\Index.cshtml" />
     <Content Include="Views\Claims\Details.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
