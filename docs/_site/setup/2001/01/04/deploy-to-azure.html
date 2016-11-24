@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-Frame-Options" content="deny">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- force most recent IE rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<link rel="icon" type="image/x-icon" href="/favicon.ico" />-->
+
+    <!-- Bootstrap CDN -->
+    <script src="http://code.jquery.com/jquery.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
+        crossorigin="anonymous">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="/css/site.css">
+
+    <title> Deploy Contoso Insurance - Contoso Insurance Sample Documentation</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="SetupHeading">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#Setup" aria-expanded="true" aria-controls="Setup">Setup</a>
+                            </h5>
+                        </div>
+                        <div id="Setup" class="collapse in" role="tabpanel" aria-labelledby="SetupHeading">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-stacked">
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/01/setup-development-env.html">Configure your Development Environment</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/02/setup-github-auth.html">Manual GitHub Authentication</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/03/create-cognative-services.html">Register for Cognitive Services</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/04/deploy-to-azure.html">Deploy Contoso Insurance</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/05/initialize-storage.html">Initialize Storage Account</a>
+                                    </li>
+
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="card">
+                        <div class="card-header" role="tab" id="ResourcesHeading">
+                            <h5 class="mb-0">
+                                <a class="collapsed" 
+                                   data-toggle="collapse"
+                                   data-parent="#accordion" 
+                                   href="#Resources" 
+                                   aria-expanded="false" 
+                                   aria-controls="Resources">Resources</a>
+                            </h5>
+                        </div>                        
+                        <div id="Resources" class="collapse" role="tabpanel" aria-labelledby="ResourcesHeading">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-stacked">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h1 id="deploy-contoso-insurance-to-azure-via-arm-template">Deploy Contoso Insurance to Azure via ARM Template</h1>
+
+<ol>
+  <li>Check to ensure that the build is passing VSTS Build</li>
+  <li>Fork this repository to your GitHub account</li>
+  <li>
+    <p>Click the Deploy to Azure Button below</p>
+
+    <p><a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fTylerLu%2fContosoInsurance%2fmaster%2fSrc%2fazuredeploy.json"><img src="http://azuredeploy.net/deploybutton.png" alt="Deploy to Azure" /></a></p>
+  </li>
+  <li>Fill in the values in the deployment page.
+<img src="/img/deployment/azure-custom-deployment.png" alt="" /></li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th>Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Resource group</strong></td>
+      <td>To reduce failures, please use a new Resource Group.</td>
+    </tr>
+    <tr>
+      <td><strong>SITENAME</strong></td>
+      <td>Use the default value. The first 6 characters of the Resource Group Id will be appended to the site name to avoid name duplication errors.</td>
+    </tr>
+    <tr>
+      <td><strong>SQLADMINISTRATORLOGINPASSWORD</strong></td>
+      <td>Use a strong password.</td>
+    </tr>
+    <tr>
+      <td><strong>SOURCECODEREPOSITORYURL</strong></td>
+      <td>Use the repository you just forked.</td>
+    </tr>
+    <tr>
+      <td><strong>SOURCECODEMANUALINTEGRATION</strong></td>
+      <td>If deploying from the main repo, use true for ManualIntegration, otherwise use false. This parameter controls whether or not a webhook is created when you deploy. If you don’t have permissions to the repo and it tries to create a webhook (i.e., ManualIntegration is false, then deployment will fail).</td>
+    </tr>
+    <tr>
+      <td><strong>VISIONSERVICESUBSCRIPTIONKEY</strong></td>
+      <td>Use one of the Computer Vision Services keys you just created.</td>
+    </tr>
+    <tr>
+      <td><strong>CLAIMSADJUSTEREMAIL</strong></td>
+      <td>Use an Office 365 Organization Account email address for this setting value.</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <ul>
+    <li><strong>This account must be a user in the Azure Active Directory associated with the Azure Subscription where you deploy the sample.</strong></li>
+    <li><strong>This account must also have an Office 365 license granted to it and an Exchange mailbox created so it can send and receive emails.</strong></li>
+    <li>You will log into the web application with this account to play the role of the claims adjuster.</li>
+  </ul>
+</blockquote>
+
+<ol>
+  <li>Click <strong>OK</strong>.</li>
+  <li>Click <strong>Review Legal terms</strong>, then click <strong>Purchase</strong>.</li>
+  <li>Click <strong>Create</strong>.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Notes:</strong></p>
+  <ul>
+    <li>The deployment creates a Basic (B1) hosting plan in Azure where all of the components are deployed.</li>
+    <li>The deployment process takes about 8 minutes.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>When the deployment steps complete, you will see the following Azure components in the Resource Group.
+<img src="/img/deployment/azure-components.png" alt="" /></li>
+  </ul>
+</blockquote>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

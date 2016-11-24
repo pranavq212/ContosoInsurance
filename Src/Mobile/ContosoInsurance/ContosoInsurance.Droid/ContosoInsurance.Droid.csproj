@@ -363,9 +363,17 @@
       <Visible>False</Visible>
       <Version>1.0</Version>
     </XamarinComponentReference>
+    <XamarinComponentReference Include="GCMClient">
+      <Visible>False</Visible>
+      <Version>1.0</Version>
+    </XamarinComponentReference>
     <XamarinComponentReference Include="hockeyappandroid">
       <Visible>False</Visible>
       <Version>4.1.0.3</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Visible>False</Visible>
+      <Version>0.7.7</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.mobile">
       <Visible>False</Visible>

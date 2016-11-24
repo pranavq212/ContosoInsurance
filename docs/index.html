@@ -1,22 +1,31 @@
----
-description: Hello World
-layout: default
----
+--- 
+title: Hello World 
+description: Hello World 
+layout: default 
+--- 
 
-{% capture welcome_content %} {% include welcome.md %} {% endcapture %}
+{% capture welcome_content %} {% include welcome.md %}{% endcapture %}
 
 <section>
-    {{ welcome_content |  markdownify }}
+    {{ welcome_content | markdownify }}
 </section>
 
 <section id="documents">
-    {% for item in site.data.downloads %}
-
-    {% endfor %}
+    {% for item in site.data.downloads %} {% endfor %}
 </section>
 
 <section>
-    {% for member in site.data.members %}
-
-    {% endfor %}
+    <div class="card-group">
+        {% for member in site.data.members %}
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/{{ member.gravatarEmailHash }}" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">{{ member.name }}</h4>
+                    <p class="card-text">{{member.role}}<br>{{ member.company }}</p>
+                    <a href="https://github.com/{{ member.github }}"><i class=""></i>Github</a>
+                    <a href="https://twitter.com/{{ member.twitter }}"><i class=""></i>Twitter</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </section>

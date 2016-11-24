@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-Frame-Options" content="deny">
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- force most recent IE rendering engine -->
@@ -21,7 +21,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="/css/site.css">
 
-    <title>{% if page.title %} {{ page.title }} - {% endif %}Contoso Insurance Sample Documentation</title>
+    <title> Manual GitHub Authentication - Contoso Insurance Sample Documentation</title>
 </head>
 
 <body>
@@ -39,71 +39,43 @@
                         <div id="Setup" class="collapse in" role="tabpanel" aria-labelledby="SetupHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.SETUP reversed %}
+                                    
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="/setup/2001/01/01/setup-development-env.html">Configure your Development Environment</a>
                                     </li>
 
-                                    {% endfor %}
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/02/setup-github-auth.html">Manual GitHub Authentication</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/03/create-cognative-services.html">Register for Cognitive Services</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/04/deploy-to-azure.html">Deploy Contoso Insurance</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/05/initialize-storage.html">Initialize Storage Account</a>
+                                    </li>
+
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    {% if site.categories.Demo %}
-                    <div class="card">
-                        <div class="card-header" role="tab" id="DemoHeading">
-                            <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#Demo" 
-                                   aria-expanded="false" 
-                                   aria-controls="Demo">Demo Script</a>
-                            </h5>
-                        </div>
-                        <div id="Demo" class="collapse" role="tabpanel" aria-labelledby="DemoHeading">
-                            <div class="card-block">
-                                <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.DEMO %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% if site.categories.HOL %}
-                     <div class="card">
-                        <div class="card-header" role="tab" id="HOLHeading">
-                            <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#HOL" 
-                                   aria-expanded="false" 
-                                   aria-controls="HOL">Hands-on Labs</a>
-                            </h5>
-                        </div>                        
-                        <div id="HOL" class="collapse" role="tabpanel" aria-labelledby="HOLHeading">
-                            <div class="card-block">
-                                <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.HOL %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
+                    
+                    
                     <div class="card">
                         <div class="card-header" role="tab" id="ResourcesHeading">
                             <h5 class="mb-0">
@@ -118,13 +90,7 @@
                         <div id="Resources" class="collapse" role="tabpanel" aria-labelledby="ResourcesHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.Resources %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -132,7 +98,34 @@
                 </div>
             </div>
             <div class="col-md-8">
-                {{ content }}
+                <h1 id="manual-github-authentication-in-azure-app-service">Manual GitHub Authentication in Azure App Service</h1>
+
+<h2 id="generate-token">Generate Token</h2>
+
+<ol>
+  <li>Open <a href="https://github.com/settings/tokens">GitHub Personal Access Token</a> in your web browser.</li>
+  <li>Sign into your GitHub account where you forked this repository.</li>
+  <li>Click <strong>Generate Token</strong></li>
+  <li>Enter a value in the <strong>Token description</strong> text box</li>
+  <li>Select all the <strong>check boxes</strong>
+ <img src="/img/deployment/github-new-personal-access-token.png" alt="image of GitHub Personal Access Tokens" /></li>
+  <li>Click <strong>Generate token</strong></li>
+  <li>Copy the token</li>
+</ol>
+
+<h2 id="add-the-github-token-to-azure-in-the-azure-resource-explorer">Add the GitHub Token to Azure in the Azure Resource Explorer</h2>
+
+<ol>
+  <li>Open <a href="https://resources.azure.com/providers/Microsoft.Web/sourcecontrols/GitHub">Azure Resource Browser</a> in your web browser.</li>
+  <li>Log in with your Azure account.</li>
+  <li>Selected the correct Azure subscription.</li>
+  <li>Select <strong>Read/Write</strong> mode.</li>
+  <li>Click <strong>Edit</strong>.</li>
+  <li>Paste the token into the <strong>token parameter</strong>.
+ <img src="/img/deployment/update-github-token-in-azure-resource-explorer.png" alt="" /></li>
+  <li>Click <strong>PUT</strong></li>
+</ol>
+
             </div>
         </div>
     </div>

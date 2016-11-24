@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-Frame-Options" content="deny">
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- force most recent IE rendering engine -->
@@ -21,7 +21,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="/css/site.css">
 
-    <title>{% if page.title %} {{ page.title }} - {% endif %}Contoso Insurance Sample Documentation</title>
+    <title> Register for Cognitive Services - Contoso Insurance Sample Documentation</title>
 </head>
 
 <body>
@@ -39,71 +39,43 @@
                         <div id="Setup" class="collapse in" role="tabpanel" aria-labelledby="SetupHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.SETUP reversed %}
+                                    
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="/setup/2001/01/01/setup-development-env.html">Configure your Development Environment</a>
                                     </li>
 
-                                    {% endfor %}
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/02/setup-github-auth.html">Manual GitHub Authentication</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/03/create-cognative-services.html">Register for Cognitive Services</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/04/deploy-to-azure.html">Deploy Contoso Insurance</a>
+                                    </li>
+
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/setup/2001/01/05/initialize-storage.html">Initialize Storage Account</a>
+                                    </li>
+
+                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    {% if site.categories.Demo %}
-                    <div class="card">
-                        <div class="card-header" role="tab" id="DemoHeading">
-                            <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#Demo" 
-                                   aria-expanded="false" 
-                                   aria-controls="Demo">Demo Script</a>
-                            </h5>
-                        </div>
-                        <div id="Demo" class="collapse" role="tabpanel" aria-labelledby="DemoHeading">
-                            <div class="card-block">
-                                <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.DEMO %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% if site.categories.HOL %}
-                     <div class="card">
-                        <div class="card-header" role="tab" id="HOLHeading">
-                            <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#HOL" 
-                                   aria-expanded="false" 
-                                   aria-controls="HOL">Hands-on Labs</a>
-                            </h5>
-                        </div>                        
-                        <div id="HOL" class="collapse" role="tabpanel" aria-labelledby="HOLHeading">
-                            <div class="card-block">
-                                <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.HOL %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
+                    
+                    
                     <div class="card">
                         <div class="card-header" role="tab" id="ResourcesHeading">
                             <h5 class="mb-0">
@@ -118,13 +90,7 @@
                         <div id="Resources" class="collapse" role="tabpanel" aria-labelledby="ResourcesHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.Resources %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -132,7 +98,22 @@
                 </div>
             </div>
             <div class="col-md-8">
-                {{ content }}
+                <h1 id="create-a-computer-vision-account">Create a Computer Vision Account</h1>
+
+<ol>
+  <li>Open <a href="https://www.microsoft.com/cognitive-services/en-us/sign-up">Microsoft Cognitive Services</a> in your web browser.</li>
+  <li>Click <strong>Let’s Go</strong></li>
+  <li>Sign in</li>
+  <li>Select the <strong>Computer Vision - Preview</strong> check box</li>
+  <li>Select the <strong>I agree to the Microsoft Cognitive Services Terms and Microsoft Privacy Statement</strong> check box</li>
+  <li>Click <strong>Subscribe</strong></li>
+  <li>Copy the Computer Vision Services keys and save them in a text file.</li>
+</ol>
+
+<blockquote>
+  <p><strong>Note:</strong> You will need one of the Computer Vision Services keys in a subsequent step</p>
+</blockquote>
+
             </div>
         </div>
     </div>

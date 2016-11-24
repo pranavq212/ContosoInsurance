@@ -1,0 +1,15 @@
+---
+title: Configure your Development Environment
+description: 
+category: SETUP
+layout: default
+---
+
+# Configure your Development Environment
+
+Download and install the following tools to run, build and/or develop this application locally.
+
+- [Visual Studio 2015 Community](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
+- [Xamarin Platform for Visual Studio](https://xamarin.com/platform) 
+
+  > **Note:** You must install the Xamarin Platform to run the mobile app.
