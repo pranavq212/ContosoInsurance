@@ -1,3 +1,11 @@
+githubOrg: syntaxc4-msft
+githubRepo: ContosoInsurance
 markdown: kramdown
 gems:
     - jekyll-gist
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"

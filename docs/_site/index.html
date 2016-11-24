@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-Frame-Options" content="deny">
-    <meta name="description" content="Hello World">
+    <meta name="description" content="Contoso Insurance is a Sample Web and Mobile Application build on Microsoft Azure.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- force most recent IE rendering engine -->
@@ -21,7 +21,7 @@
     <!-- Site CSS -->
     <link rel="stylesheet" href="/css/site.css">
 
-    <title> Hello World - Contoso Insurance Sample Documentation</title>
+    <title> Welcome to Contoso Insurance - Contoso Insurance Sample Documentation</title>
 </head>
 
 <body>
@@ -75,6 +75,32 @@
                         </div>
                     </div>
                     
+                    <div class="card">
+                        <div class="card-header" role="tab" id="DemoHeading">
+                            <h5 class="mb-0">
+                                <a class="collapsed" 
+                                   data-toggle="collapse"
+                                   data-parent="#accordion" 
+                                   href="#Demo" 
+                                   aria-expanded="false" 
+                                   aria-controls="Demo">Demo Script</a>
+                            </h5>
+                        </div>
+                        <div id="Demo" class="collapse" role="tabpanel" aria-labelledby="DemoHeading">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-stacked">
+                                    
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/demo/2001/02/01/Hello-World.html">Hello World</a>
+                                    </li>
+
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
                     
                     <div class="card">
                         <div class="card-header" role="tab" id="ResourcesHeading">
@@ -102,60 +128,256 @@
 
 <section>
     
-<h1 id="contoso-insurance-sample-application">Contoso Insurance Sample Application</h1>
+<h1 id="contoso-insurance-sample">Contoso Insurance Sample</h1>
 
-<p>Welcome!</p>
+<p>Contoso Insurance is a sample that demonstrates the advantages of using the Azure App Service for building Modern Applications.</p>
+
+<p>It demonstrates using the following Azure App Services features:</p>
+
+<ul>
+  <li>App Service authentication/authorization</li>
+  <li>Continuous integration and deployment</li>
+  <li>Mobile app server SDK</li>
+  <li>Mobile offline sync client SDK</li>
+  <li>Mobile file sync SDK</li>
+  <li>Logic Apps
+    <ul>
+      <li>Invoking Azure Functions via web hooks</li>
+      <li>Sending Email</li>
+    </ul>
+  </li>
+  <li>Azure Functions
+    <ul>
+      <li>Web hook triggers</li>
+      <li>Queue triggers</li>
+    </ul>
+  </li>
+  <li>Azure Cognitive Services - Computer Vision API</li>
+  <li>Azure Resource Manager (ARM) Templates</li>
+  <li>Notification Hubs
+    <ul>
+      <li>Push Notifications to mobile devices</li>
+    </ul>
+
+    <p>The sample also demonstrates how to use other technologies including:</p>
+  </li>
+  <li>ASP.NET MVC Web Site with Knockout</li>
+  <li>ASP.NET MVC Web API</li>
+  <li>Xamarin Forms Mobile Application
+    <ul>
+      <li>iOS</li>
+      <li>Android</li>
+    </ul>
+  </li>
+  <li>Azure Application Insights</li>
+  <li>HockeyApp</li>
+  <li>Azure PaaS SQL Databases</li>
+  <li>Entity Framework</li>
+  <li>Azure Storage Accounts
+    <ul>
+      <li>Queues</li>
+      <li>Blobs</li>
+    </ul>
+  </li>
+  <li>Extension methods</li>
+  <li>Custom Attributes</li>
+</ul>
 
 </section>
 
 <section id="documents">
-    
+    <h2>Downloads</h2>
+    <br>
+    <div class="card-group">
+            
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Azure Components <small>(Word Document)</small></h4>
+                        <p class="card-text"><small class="text-muted">This download provides context on the different Azure Services used to create Contoso Insurance.</small></p>
+                        <a href="/assets/Azure%20Components.docx" class="btn btn-success">Download</a>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Contoso Insurance Flow <small>(Visio)</small></h4>
+                        <p class="card-text"><small class="text-muted">This download provides a flow diagram of how data flows through the application.</small></p>
+                        <a href="/assets/Contoso%20Insurance.vsdx" class="btn btn-success">Download</a>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Contoso Insurance Flow <small>(Image/Png)</small></h4>
+                        <p class="card-text"><small class="text-muted">This download provides a flow diagram of how data flows through the application.</small></p>
+                        <a href="/assets/Contoso%20Insurance.png" class="btn btn-success">Download</a>
+                    </div>
+                </div>
+            
+                <div class="card">
+                    <div class="card-block">
+                        <h4 class="card-title">Demo Script <small>(Powerpoint)</small></h4>
+                        <p class="card-text"><small class="text-muted">This download provides step-by-step instructions for walking through the application.</small></p>
+                        <a href="/assets/Demo%20Script.pptx" class="btn btn-success">Download</a>
+                    </div>
+                </div>
+            
+    </div>
 </section>
 
-<section>
-    <div class="card-group">
+<section id="contributors">
+    <h2>Contributors</h2>
+    <br>
+    <div class="card-columns">
         
             <div class="card">
-                <img class="card-img-top" src="https://gravatar.com/avatar/bfb79985340321e0ff40f9e460ca699f" alt="Card image cap">
+                <img class="card-img-top" src="https://gravatar.com/avatar/bfb79985340321e0ff40f9e460ca699f?d=mm" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Cory Fowler</h4>
-                    <p class="card-text">Sponsor / Support<br>Microsoft</p>
+                    <p class="card-text"><small class="text-muted">Sponsor, Support</small><br><small>Microsoft</small></p>
                     <a href="https://github.com/SyntaxC4"><i class=""></i>Github</a>
                     <a href="https://twitter.com/cfowlerMSFT"><i class=""></i>Twitter</a>
                 </div>
             </div>
         
             <div class="card">
-                <img class="card-img-top" src="https://gravatar.com/avatar/efa9545ee9c12f86c53f4b83a0d09bce" alt="Card image cap">
+                <img class="card-img-top" src="https://gravatar.com/avatar/efa9545ee9c12f86c53f4b83a0d09bce?d=mm" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Donna Malayeri</h4>
-                    <p class="card-text">Sponsor / Support<br>Microsoft</p>
+                    <p class="card-text"><small class="text-muted">Sponsor, Support</small><br><small>Microsoft</small></p>
                     <a href="https://github.com/lindydonna"><i class=""></i>Github</a>
                     <a href="https://twitter.com/lindydonna"><i class=""></i>Twitter</a>
                 </div>
             </div>
         
             <div class="card">
-                <img class="card-img-top" src="https://gravatar.com/avatar/92309f3d7492749d7ce29c64de5f8656" alt="Card image cap">
+                <img class="card-img-top" src="https://gravatar.com/avatar/92309f3d7492749d7ce29c64de5f8656?d=mm" alt="Card image cap">
                 <div class="card-block">
                     <h4 class="card-title">Yochay Kiriaty</h4>
-                    <p class="card-text">Sponsor / Support<br>Microsoft</p>
+                    <p class="card-text"><small class="text-muted">Sponsor, Support</small><br><small>Microsoft</small></p>
                     <a href="https://github.com/yochay"><i class=""></i>Github</a>
                     <a href="https://twitter.com/yochayk"><i class=""></i>Twitter</a>
                 </div>
             </div>
         
             <div class="card">
-                <img class="card-img-top" src="https://gravatar.com/avatar/e39a60b31c52b4dc8e93badaa598c0a0" alt="Card image cap">
+                <img class="card-img-top" src="https://gravatar.com/avatar/7b912926d54298ef520ee689c3d20e73?d=mm" alt="Card image cap">
                 <div class="card-block">
-                    <h4 class="card-title">Jeff Hollan</h4>
-                    <p class="card-text">Sponsor / Support<br>Microsoft</p>
-                    <a href="https://github.com/jeffhollan"><i class=""></i>Github</a>
-                    <a href="https://twitter.com/jeffhollan"><i class=""></i>Twitter</a>
+                    <h4 class="card-title">Todd Baginski</h4>
+                    <p class="card-text"><small class="text-muted">Project Lead, Architect, Documentation</small><br><small>Canviz Consulting</small></p>
+                    <a href="https://github.com/tbag"><i class=""></i>Github</a>
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Cloris Sun</h4>
+                    <p class="card-text"><small class="text-muted">Mobile Apps</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Albert Xie</h4>
+                    <p class="card-text"><small class="text-muted">Web Apps</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Tyler Lu</h4>
+                    <p class="card-text"><small class="text-muted">Azure Components, Services, Deployment</small><br><small>Canviz Consulting</small></p>
+                    <a href="https://github.com/TylerLu"><i class=""></i>Github</a>
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Ring Li</h4>
+                    <p class="card-text"><small class="text-muted">Testing</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Melody She</h4>
+                    <p class="card-text"><small class="text-muted">Testing</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Justin So</h4>
+                    <p class="card-text"><small class="text-muted">UX Design</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Johnny Chu</h4>
+                    <p class="card-text"><small class="text-muted">PM</small><br><small>Canviz Consulting</small></p>
+                    
+                    
+                </div>
+            </div>
+        
+            <div class="card">
+                <img class="card-img-top" src="https://gravatar.com/avatar/?d=mm" alt="Card image cap">
+                <div class="card-block">
+                    <h4 class="card-title">Arthur Zheng</h4>
+                    <p class="card-text"><small class="text-muted">PM</small><br><small>Canviz Consulting</small></p>
+                    
+                    
                 </div>
             </div>
         
     </div>
+</section>
+
+<section id="history">
+    <h2>History</h2>
+    <br>
+    <table class="table table-hover">
+        <thead class="thead-inverse">
+            <th>Version</th>
+            <th>Release Date</th>
+            <th>Comments</th>
+        </thead>
+        <tbody>
+            
+                <tr>
+                    <td>1.0</td>
+                    <td>Sept 26, 2016</td>
+                    <td>Initial release</td>
+                </tr>
+            
+        </tbody>
+    </table>
+</section>
+
+<section id="license">
+    <h2>License</h2>
+    <br>
+    See <a href="https://github.com/syntaxc4-msft/ContosoInsurance/blob/master/LICENSE.txt" target="_blank">LICENSE</a>
 </section>
             </div>
         </div>
