@@ -1,7 +1,6 @@
 ---
 title: Initialize Storage Account
 description:
-layout: default
 category: SETUP
 ---
 

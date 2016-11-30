@@ -2,7 +2,6 @@
 title: Configure your Development Environment
 description: 
 category: SETUP
-layout: default
 ---
 
 # Configure your Development Environment

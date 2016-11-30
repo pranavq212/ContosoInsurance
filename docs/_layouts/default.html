@@ -54,12 +54,7 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="DemoHeading">
                             <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#Demo" 
-                                   aria-expanded="false" 
-                                   aria-controls="Demo">Demo Script</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Demo" aria-expanded="false" aria-controls="Demo">Demo Script</a>
                             </h5>
                         </div>
                         <div id="Demo" class="collapse" role="tabpanel" aria-labelledby="DemoHeading">
@@ -76,19 +71,13 @@
                             </div>
                         </div>
                     </div>
-                    {% endif %}
-                    {% if site.categories.HOL %}
-                     <div class="card">
+                    {% endif %} {% if site.categories.HOL %}
+                    <div class="card">
                         <div class="card-header" role="tab" id="HOLHeading">
                             <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#HOL" 
-                                   aria-expanded="false" 
-                                   aria-controls="HOL">Hands-on Labs</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#HOL" aria-expanded="false" aria-controls="HOL">Hands-on Labs</a>
                             </h5>
-                        </div>                        
+                        </div>
                         <div id="HOL" class="collapse" role="tabpanel" aria-labelledby="HOLHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
@@ -107,18 +96,33 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="ResourcesHeading">
                             <h5 class="mb-0">
-                                <a class="collapsed" 
-                                   data-toggle="collapse"
-                                   data-parent="#accordion" 
-                                   href="#Resources" 
-                                   aria-expanded="false" 
-                                   aria-controls="Resources">Resources</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Resources" aria-expanded="false" aria-controls="Resources">Resources</a>
                             </h5>
-                        </div>                        
+                        </div>
                         <div id="Resources" class="collapse" role="tabpanel" aria-labelledby="ResourcesHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.Resources %}
+                                    {% for doc in site.categories.RESOURCES %}
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
+                                    </li>
+
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" role="tab" id="CleanUpHeading">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#CleanUp" aria-expanded="false" aria-controls="CleanUp">Clean Up</a>
+                            </h5>
+                        </div>
+                        <div id="CleanUp" class="collapse" role="tabpanel" aria-labelledby="CleanUpHeading">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-stacked">
+                                    {% for doc in site.categories.CLEANUP reversed %}
 
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
@@ -138,4 +142,5 @@
     </div>
 
 </body>
+
 </html>

@@ -1,7 +1,6 @@
 ---
 title: Deploy Contoso Insurance
 description:
-layout: default
 category: SETUP
 ---
 

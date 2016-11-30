@@ -1,7 +1,6 @@
 ---
 title: Register for Cognitive Services
 description:
-layout: default
 category: SETUP
 ---
 

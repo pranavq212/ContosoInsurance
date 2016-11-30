@@ -2,7 +2,6 @@
 title: Manual GitHub Authentication
 description: 
 category: SETUP
-layout: default
 ---
 
 # Manual GitHub Authentication in Azure App Service
