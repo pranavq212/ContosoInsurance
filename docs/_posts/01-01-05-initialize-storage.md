@@ -17,6 +17,6 @@ category: SETUP
    >**Note:** The PowerShell below will create necessary blob containers and queues.
    > Please Use the *Storage Account Name* and *Storage Account Key* associated with your Storage Account.
 
-```PowerShell
+```powershell
 ./InitStorage.ps1 <<Your Storage Account Name>> <<Your Storage Account Key>>
 ```

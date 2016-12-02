@@ -18,25 +18,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
         crossorigin="anonymous">
 
+    <!-- Highlightjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
     <!-- Site CSS -->
     <link rel="stylesheet" href="/css/site.css">
 
-    <title>{% if page.title %} {{ page.title }} - {% endif %}Contoso Insurance Sample Documentation</title>
+    <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.sample}} Sample Documentation</title>
 </head>
 
 <body>
-
+    <nav class="navbar navbar-dark bg-primary">
+        <h1 class="navbar-brand mb-0">{{ site.sample }} <small>Documentation</small></h1>
+        <span class="float-xs-right">
+            <a class="github-button" href="https://github.com/{{ site.githubOrg }}/{{ site.githubRepo }}/issues" data-icon="octicon-issue-opened" data-count-api="/repos/{{ site.githubOrg }}/{{ site.githubRepo }}#open_issues_count" data-count-aria-label="# issues on GitHub" aria-label="Issue {{ site.githubOrg }}/{{ site.githubRepo }} on GitHub">Issue</a>
+            <a class="github-button" href="https://github.com/{{ site.githubOrg }}/{{ site.githubRepo }}/fork" data-count-href="/{{ site.githubOrg }}/{{ site.githubRepo }}/network" data-count-api="/repos/{{ site.githubOrg }}/{{ site.githubRepo }}#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork {{ site.githubOrg }}/{{ site.githubRepo }} on GitHub">Fork</a>
+        </span>
+    </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
                         <div class="card-header" role="tab" id="SetupHeading">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#Setup" aria-expanded="true" aria-controls="Setup">Setup</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#Setup" aria-expanded="{% if page.category == "SETUP" %}true{% else %}false{% endif %}" aria-controls="Setup">Setup</a>
                             </h5>
                         </div>
-                        <div id="Setup" class="collapse in" role="tabpanel" aria-labelledby="SetupHeading">
+                        <div id="Setup" class="collapse{% if page.category == "SETUP" %} in{% endif %}" role="tabpanel" aria-labelledby="SetupHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
                                     {% for doc in site.categories.SETUP reversed %}
@@ -54,10 +64,10 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="DemoHeading">
                             <h5 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Demo" aria-expanded="false" aria-controls="Demo">Demo Script</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Demo" aria-expanded="{% if page.category == "DEMO" %}true{% else %}false{% endif %}" aria-controls="Demo">Demo Script</a>
                             </h5>
                         </div>
-                        <div id="Demo" class="collapse" role="tabpanel" aria-labelledby="DemoHeading">
+                        <div id="Demo" class="collapse{% if page.category == "DEMO" %} in{% endif %}" role="tabpanel" aria-labelledby="DemoHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
                                     {% for doc in site.categories.DEMO %}
@@ -75,10 +85,10 @@
                     <div class="card">
                         <div class="card-header" role="tab" id="HOLHeading">
                             <h5 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#HOL" aria-expanded="false" aria-controls="HOL">Hands-on Labs</a>
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#HOL" aria-expanded="{% if page.category == "HOL" %}true{% else %}false{% endif %}" aria-controls="HOL">Hands-on Labs</a>
                             </h5>
                         </div>
-                        <div id="HOL" class="collapse" role="tabpanel" aria-labelledby="HOLHeading">
+                        <div id="HOL" class="collapse{% if page.category == "HOL" %} in{% endif %}" role="tabpanel" aria-labelledby="HOLHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
                                     {% for doc in site.categories.HOL %}
@@ -94,32 +104,12 @@
                     </div>
                     {% endif %}
                     <div class="card">
-                        <div class="card-header" role="tab" id="ResourcesHeading">
-                            <h5 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Resources" aria-expanded="false" aria-controls="Resources">Resources</a>
-                            </h5>
-                        </div>
-                        <div id="Resources" class="collapse" role="tabpanel" aria-labelledby="ResourcesHeading">
-                            <div class="card-block">
-                                <ul class="nav nav-pills nav-stacked">
-                                    {% for doc in site.categories.RESOURCES %}
-
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
-                                    </li>
-
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
                         <div class="card-header" role="tab" id="CleanUpHeading">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#CleanUp" aria-expanded="false" aria-controls="CleanUp">Clean Up</a>
+                                <a data-toggle="collapse" data-parent="#accordion" href="#CleanUp" aria-expanded="{% if page.category == "CLEANUP" %}true{% else %}false{% endif %}" aria-controls="CleanUp">Clean Up</a>
                             </h5>
                         </div>
-                        <div id="CleanUp" class="collapse" role="tabpanel" aria-labelledby="CleanUpHeading">
+                        <div id="CleanUp" class="collapse{% if page.category == "CLEANUP" %} in{% endif %}" role="tabpanel" aria-labelledby="CleanUpHeading">
                             <div class="card-block">
                                 <ul class="nav nav-pills nav-stacked">
                                     {% for doc in site.categories.CLEANUP reversed %}
@@ -133,14 +123,37 @@
                             </div>
                         </div>
                     </div>
+                    {% if site.categories.RESOURCES %}
+                    <div class="card">
+                        <div class="card-header" role="tab" id="ResourcesHeading">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#Resources" aria-expanded="{% if page.category == "RESOURCES" %}true{% else %}false{% endif %}" aria-controls="Resources">Resources</a>
+                            </h5>
+                        </div>
+                        <div id="Resources" class="collapse{% if page.category == "RESOURCES" %} in{% endif %}" role="tabpanel" aria-labelledby="ResourcesHeading">
+                            <div class="card-block">
+                                <ul class="nav nav-pills nav-stacked">
+                                    {% for doc in site.categories.RESOURCES %}
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{doc.url}}">{{doc.title}}</a>
+                                    </li>
+
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 {{ content }}
             </div>
         </div>
     </div>
-
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>

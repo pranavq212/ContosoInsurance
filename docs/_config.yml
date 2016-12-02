@@ -1,6 +1,8 @@
+sample: Contoso Insurance
 githubOrg: syntaxc4-msft
 githubRepo: ContosoInsurance
 markdown: kramdown
+highlighter: rouge
 gems:
     - jekyll-gist
 defaults:
