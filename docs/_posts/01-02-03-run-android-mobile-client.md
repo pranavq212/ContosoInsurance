@@ -10,7 +10,7 @@ category: DEMO
    
 2. Configure the debugging target device according to the screenshot below.
 
-   ![](/img/deployment/VS-Android-Deployment-Settings.png)
+   ![]({{site.baseurl}}/img/deployment/VS-Android-Deployment-Settings.png)
 3. Press **F5**.
 4. Observe the Android Simulator start and load the Contoso Insurance mobile app.
 
@@ -21,17 +21,17 @@ category: DEMO
 1. Run the **ContosoInsurance.Droid** project on the Android simulator.
 2. Step-by-Step, submit a claim successfully.
 
-	![](/img/deployment/Android-submit-a-claim.png)
+	![]({{site.baseurl}}/img/deployment/Android-submit-a-claim.png)
 
 3. Go to the Contoso Insurance web site.
 4. Search the claim that you just submitted above and go to the claim detail page.
 5. **Approve** or **Reject** the claim.
 
-	![](/img/deployment/approve-a-claim.png)	
+	![]({{site.baseurl}}/img/deployment/approve-a-claim.png)	
 
 6. The Android simulator will display the notification on the status bar.
 
-    ![](/img/deployment/android-display-notification.png)
+    ![]({{site.baseurl}}/img/deployment/android-display-notification.png)
 
 # How To: Take an new Picture on the Android simulator
 
@@ -46,15 +46,15 @@ If you want to print out the demo images for license plates, insurance cards, an
 
 2. Click the **Camera** button.
 
-	![](/img/deployment/Android-camerabuttonClick.png)
+	![]({{site.baseurl}}/img/deployment/Android-camerabuttonClick.png)
 
 3. Click the **More** button on the bottom bar.
 
-	![](/img/deployment/Android-galleryClickMenu.png)
+	![]({{site.baseurl}}/img/deployment/Android-galleryClickMenu.png)
 
 4. Click the **Capture picture** button.
 
-	![](/img/deployment/Android-galleryClickCapturePicture.png)
+	![]({{site.baseurl}}/img/deployment/Android-galleryClickCapturePicture.png)
 
 5. Take a new picture.
 
@@ -62,4 +62,4 @@ If you want to print out the demo images for license plates, insurance cards, an
 
 	>**Note:** In this example there was no web cam attached to the Android Simulator, that's why you see the checkerboard image.  When you have a web cam attached to your simulator you will see the image of what the web cam is looking at.
 
-	![](/img/deployment/Android-gallerySelectPicture.png)
+	![]({{site.baseurl}}/img/deployment/Android-gallerySelectPicture.png)

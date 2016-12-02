@@ -12,13 +12,13 @@ Each claim has a CorrelationId associated with it.  You can see this in the scre
 1. Copy the CorrelationId from a Custom Event.
 2. Click **Search**.
 
-![](/img/deployment/App-Insights-Search.png)
+![]({{site.baseurl}}/img/deployment/App-Insights-Search.png)
 
 3. Paste the CorrelationId into the **Search textbox** and observe all the Custom Events associated with the CorrelationId.
 
 >**Note:**  This is an excellent way to debug errors in the system and is also especially helpful to determine how long a given step takes to execute.  This sample typically processes claims from the point where they are submitted in the mobile app to the point where they are ready for manual approval in 15 seconds when running the sample on the most basic App Services service level!
 
-![](/img/deployment/App-Insights-Search-Results-CorrelationId.png) 
+![]({{site.baseurl}}/img/deployment/App-Insights-Search-Results-CorrelationId.png) 
 
 **Track an individual claim with Application Insights Analytics**
 
@@ -34,4 +34,4 @@ customEvents
 ```
 As you can see below, this claim took 22 seconds to process.
 
-![](/img/deployment/Application-Insights-Analytics.png)
+![]({{site.baseurl}}/img/deployment/Application-Insights-Analytics.png)

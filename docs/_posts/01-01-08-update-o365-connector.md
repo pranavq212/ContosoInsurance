@@ -10,20 +10,20 @@ The Logic App uses an Office 365 API Connection to send email.  To authorize the
 ​	
 1. Open the **API Connection**.	
 
-   ![](/img/deployment/azure-office365-api-connection.png)
+   ![]({{site.baseurl}}/img/deployment/azure-office365-api-connection.png)
 
 2. Click the **orange alert**.
 
-   ![](/img/deployment/authenticate-office365-api-connection-01.png)
+   ![]({{site.baseurl}}/img/deployment/authenticate-office365-api-connection-01.png)
 
 3. Click **Authorize**:
 
-   ![](/img/deployment/authenticate-office365-api-connection-02.png)
+   ![]({{site.baseurl}}/img/deployment/authenticate-office365-api-connection-02.png)
 
 4. Sign in with your Office 365 account.
 
-   ![](/img/deployment/authenticate-office365-api-connection-03.png)
+   ![]({{site.baseurl}}/img/deployment/authenticate-office365-api-connection-03.png)
 
 5. Click **Save**.
 
-   ![](/img/deployment/authenticate-office365-api-connection-04.png)
+   ![]({{site.baseurl}}/img/deployment/authenticate-office365-api-connection-04.png)

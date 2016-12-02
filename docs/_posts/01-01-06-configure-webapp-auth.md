@@ -16,7 +16,7 @@ category: SETUP
 
    Follow the steps in this article: [How to configure your App Service application to use Microsoft Account login](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-microsoft-authentication/)
    ​	
-   ![](/img/deployment/auth-api-app.png)
+   ![]({{site.baseurl}}/img/deployment/auth-api-app.png)
 
    >**IMPORTANT Note:** Ensure that the Action to take when a request is not authenticated is set to **Allow request (no action)**.  This is shown in the screenshot above.
 
@@ -24,10 +24,10 @@ category: SETUP
 
 2. Configure the Web App to use AAD Authentication.
 
-   ![](/img/deployment/azure-web-app.png)
+   ![]({{site.baseurl}}/img/deployment/azure-web-app.png)
 
    If the Express configuration does not work, follow the steps in the **Manually configure Azure Active Directory with advanced settings** section in this article: [How to configure your App Service application to use Azure Active Directory login](https://azure.microsoft.com/en-us/documentation/articles/app-service-mobile-how-to-configure-active-directory-authentication/)
 
-   ![](/img/deployment/auth-web-app.png)
+   ![]({{site.baseurl}}/img/deployment/auth-web-app.png)
 
    >**IMPORTANT Note:** Ensure that the Action to take when a request is not authenticated is set to **Log in with Azure Active Directory**.  This is shown in the screenshot above.

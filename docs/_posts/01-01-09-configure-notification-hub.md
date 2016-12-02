@@ -8,11 +8,11 @@ category: SETUP
 
 1. Open the Notification Hub.
 
-   ![](/img/deployment/azure-notification-hub.png)
+   ![]({{site.baseurl}}/img/deployment/azure-notification-hub.png)
 
 2. Click **All Settings**, then click **Notification Services**.
 
-   ![](/img/deployment/configure-notification-hub.png)
+   ![]({{site.baseurl}}/img/deployment/configure-notification-hub.png)
 
 3. Configure **Google (GCM)**.
 
@@ -22,11 +22,11 @@ category: SETUP
 
    * After your project is created click **Add Firebase to your Android app** and follow the instructions provided.
 
-     ![](/img/deployment/firebase-app-overview.png)			
+     ![]({{site.baseurl}}/img/deployment/firebase-app-overview.png)			
 
    * Click the **cog**, then click **Project Settings** -> **CLOUD MESSAGING**.
 
-     ![](/img/deployment/firebase-app-web-api-key.png)
+     ![]({{site.baseurl}}/img/deployment/firebase-app-web-api-key.png)
 
      If the page says "Your project doesn't have a server key", click **Regenerate Key**.
 
@@ -34,11 +34,11 @@ category: SETUP
 
      > **Note**: The **Sender ID** will be used on the **Settings** page of the Android App.
 
-     > ![](/img/deployment/android-app-settings.png)
+     > ![]({{site.baseurl}}/img/deployment/android-app-settings.png)
 
    * Paste the server key to the **API Key** input box below.
 
-     ![](/img/deployment/configure-notification-hub-gcm.png)
+     ![]({{site.baseurl}}/img/deployment/configure-notification-hub-gcm.png)
 
      Click **Save**.
 
@@ -54,7 +54,7 @@ category: SETUP
 
    - Click **Upload Certificate**. Upload the .p12 push certificate file you exported earlier. 
 
-     ![](/img/deployment/configure-notification-hub-apns.png)
+     ![]({{site.baseurl}}/img/deployment/configure-notification-hub-apns.png)
 
      > **Note**: Make sure to select **Sandbox** if you created a development push certificate for development and testing. 	Otherwise, choose **Production**.
 

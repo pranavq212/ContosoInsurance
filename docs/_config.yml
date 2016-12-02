@@ -12,3 +12,4 @@ defaults:
     values:
       layout: "default"
 keep_files: ['app_data/jobs/triggered','app_data/jobs/continuous']
+baseurl: /ContosoInsurance

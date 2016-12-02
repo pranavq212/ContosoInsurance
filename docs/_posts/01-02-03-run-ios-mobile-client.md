@@ -15,7 +15,7 @@ category: DEMO
        1.Click **OK**.
 2. Configure the debugging target device according to the screenshot below.
 
-   ![](/img/deployment/VS-iOS-Deployment-Settings.png)
+   ![]({{site.baseurl}}/img/deployment/VS-iOS-Deployment-Settings.png)
 3. Press **F5**.
 4. Observe the iOS Simulator start on the Mac Agent and load the Contoso Insurance mobile app.
 
@@ -23,7 +23,7 @@ category: DEMO
 
 1.  In the Simulator menu, click **Debug**, **Location**, **Custom Location**.
 
-    ![](/img/deployment/iOS-Simulator-Location.png)
+    ![]({{site.baseurl}}/img/deployment/iOS-Simulator-Location.png)
 
     1.Enter a **latitude** and **longitude**.
     2.Click **OK**.
@@ -35,14 +35,14 @@ category: DEMO
 1. Run the **ContosoInsurance.iOS** app on an iOS device.
 2. Step-by-Step, submit a claim successfully.
 
-	![](/img/deployment/ios-submit-a-claim.png)
+	![]({{site.baseurl}}/img/deployment/ios-submit-a-claim.png)
 
 3. Go to the Contoso Insurance web site.
 4. Search the claim that you just submitted above and go to the claim detail page.
 5. **Approve** or **Reject** the claim.
 
-	![](/img/deployment/approve-a-claim.png)	
+	![]({{site.baseurl}}/img/deployment/approve-a-claim.png)	
 
 6. The iOS device will display the notification.
 
-	![](/img/deployment/ios-display-notification.png)	
+	![]({{site.baseurl}}/img/deployment/ios-display-notification.png)	

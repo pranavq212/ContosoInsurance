@@ -13,7 +13,7 @@ category: SETUP
    [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fTylerLu%2fContosoInsurance%2fmaster%2fSrc%2fazuredeploy.json)
 
 1. Fill in the values in the deployment page.
-   ![](/img/deployment/azure-custom-deployment.png)
+   ![]({{site.baseurl}}/img/deployment/azure-custom-deployment.png)
 
 | Property | Description |
 |---|---|
@@ -39,4 +39,4 @@ category: SETUP
 >- The deployment process takes about 8 minutes.
 
 >- When the deployment steps complete, you will see the following Azure components in the Resource Group.
-> ![](/img/deployment/azure-components.png)
+> ![]({{site.baseurl}}/img/deployment/azure-components.png)

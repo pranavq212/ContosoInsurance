@@ -10,12 +10,12 @@ As you use the demo, many claims will accumulate in the databases and in the blo
 
 1. Open the Web App in a web browser and log in.
 
-   ![](/img/deployment/azure-web-app.png)
+   ![]({{site.baseurl}}/img/deployment/azure-web-app.png)
 
 2. Click the **username** at the top right of the page:
 
-   ![](/img/deployment/admin-user-info.png)
+   ![]({{site.baseurl}}/img/deployment/admin-user-info.png)
 
 3. Click **Wipe Claims**.
 
-   ![](/img/deployment/admin-wipe-claims.png)
+   ![]({{site.baseurl}}/img/deployment/admin-wipe-claims.png)

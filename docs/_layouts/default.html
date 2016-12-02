@@ -23,10 +23,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
 
     <!-- Site CSS -->
-    <link rel="stylesheet" href="{{ site.github.url }}/css/site.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
 
     <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.sample}} Sample Documentation</title>
-    <base href="{{ site.github.url }}">
 </head>
 
 <body>
@@ -53,7 +52,7 @@
                                     {% for doc in site.categories.SETUP reversed %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.github.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
                                     </li>
 
                                     {% endfor %}
@@ -74,7 +73,7 @@
                                     {% for doc in site.categories.DEMO %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.github.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
                                     </li>
 
                                     {% endfor %}
@@ -95,7 +94,7 @@
                                     {% for doc in site.categories.HOL %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.github.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
                                     </li>
 
                                     {% endfor %}
@@ -116,7 +115,7 @@
                                     {% for doc in site.categories.CLEANUP reversed %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.github.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
                                     </li>
 
                                     {% endfor %}
@@ -137,7 +136,7 @@
                                     {% for doc in site.categories.RESOURCES %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.github.url}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
                                     </li>
 
                                     {% endfor %}

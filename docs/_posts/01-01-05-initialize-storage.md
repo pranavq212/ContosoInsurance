@@ -8,9 +8,9 @@ category: SETUP
 
 1. Get the name and key of the Storage Account.
 
-   ![](/img/deployment/azure-storage-account.png)
+   ![]({{site.baseurl}}/img/deployment/azure-storage-account.png)
    ​	
-   ![Get the name and key of the storage account](/img/deployment/get-name-and-key-of-the-storage-account.png)
+   ![Get the name and key of the storage account]({{site.baseurl}}/img/deployment/get-name-and-key-of-the-storage-account.png)
 
 2. Execute the **src/Cloud/InitStorage.ps1** PowerShell script. 
 
