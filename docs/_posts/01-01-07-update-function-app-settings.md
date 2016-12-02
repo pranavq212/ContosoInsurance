@@ -32,4 +32,7 @@ category: SETUP
 
    ![Update appsettings of the Function App]({{site.baseurl}}/img/deployment/update-appsettings-of-the-function-app.png)
 
-   >**Note:**  If you deploy the Function App again with the ARM template then you will have to manually set  the **Contoso_ClaimAutoApproverUrl** App Setting again.
+   > **Note:** 
+   > 
+   > If you deploy the Function App again with the ARM template then you will have to manually set  the **Contoso_ClaimAutoApproverUrl** App Setting again.
+   {: .blockquote .alert-info }

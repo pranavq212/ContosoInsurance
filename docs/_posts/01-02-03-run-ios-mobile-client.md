@@ -20,6 +20,7 @@ category: DEMO
 4. Observe the iOS Simulator start on the Mac Agent and load the Contoso Insurance mobile app.
 
 > **Note:** If you do not set a location for the mobile app it will fail with an exception.
+{: .blockquote .alert-info}
 
 1.  In the Simulator menu, click **Debug**, **Location**, **Custom Location**.
 

@@ -17,6 +17,7 @@ category: DEMO
 # How To: Test Notifications on the Android simulator/device
 
 > **Note:** Make sure [Google Play Service](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en "Google Play Service") has been installed on your Android simulator/device before testing notifications.
+{: .blockquote .alert-info}
 
 1. Run the **ContosoInsurance.Droid** project on the Android simulator.
 2. Step-by-Step, submit a claim successfully.
@@ -38,9 +39,10 @@ category: DEMO
 If you want to print out the demo images for license plates, insurance cards, and driver's licenses and use the simulator to take a picture of them, here's how to do it.
 
 >**Note:** Here, we use the **5" KitKat(4.4) XXHDPI Phone (Android 4.4 - API19)** simulator to demonstrate these steps.
-
+{: .blockquote .alert-info}
 
 >**Note:** You must configure your simulator to use a web cam attached to your computer to take a picture.  See these [instructions](https://developer.android.com/studio/run/managing-avds.html) to learn how to do this.
+{: .blockquote .alert-warning}
 
 1. Open the ContosoInsurance App in the Android simulator.
 
@@ -61,5 +63,6 @@ If you want to print out the demo images for license plates, insurance cards, an
 6. Select the new picture you just took.
 
 	>**Note:** In this example there was no web cam attached to the Android Simulator, that's why you see the checkerboard image.  When you have a web cam attached to your simulator you will see the image of what the web cam is looking at.
+	{: .blockquote .alert-info}
 
 	![]({{site.baseurl}}/img/deployment/Android-gallerySelectPicture.png)

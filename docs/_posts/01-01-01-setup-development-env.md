@@ -12,3 +12,4 @@ Download and install the following tools to run, build and/or develop this appli
 - [Xamarin Platform for Visual Studio](https://xamarin.com/platform) 
 
   > **Note:** You must install the Xamarin Platform to run the mobile app.
+  {: .blockquote .alert-danger}

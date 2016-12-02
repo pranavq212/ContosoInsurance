@@ -15,3 +15,4 @@ category: SETUP
 7. Copy the Computer Vision Services keys and save them in a text file.  
 
 > **Note:** You will need one of the Computer Vision Services keys in a subsequent step
+{: .blockquote .alert-danger}

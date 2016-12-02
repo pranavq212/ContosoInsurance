@@ -26,17 +26,19 @@ category: SETUP
 | ClaimsAdjusterEmail | Use an Office 365 Organization Account email address for this setting value. |
 {: .table .table-sm .table-striped}
 
-> * **This account must be a user in the Azure Active Directory associated with the Azure Subscription where you deploy the sample.**  
-> * **This account must also have an Office 365 license granted to it and an Exchange mailbox created so it can send and receive emails.**  
+> **Note:** There are a few requirements for **ClaimsAdjusterEmail**
+> * This account must be a user in the Azure Active Directory associated with the Azure Subscription where you deploy the sample.  
+> * This account must also have an Office 365 license granted to it and an Exchange mailbox created so it can send and receive emails.  
 > * You will log into the web application with this account to play the role of the claims adjuster.
+{: .blockquote .alert-warning}
 
 1. Click **OK**.
 1. Click **Review Legal terms**, then click **Purchase**.
 1. Click **Create**.
 
->**Notes:** 
+> **Notes:** 
 >- The deployment creates a Basic (B1) hosting plan in Azure where all of the components are deployed.
 >- The deployment process takes about 8 minutes.
-
 >- When the deployment steps complete, you will see the following Azure components in the Resource Group.
 > ![]({{site.baseurl}}/img/deployment/azure-components.png)
+{: .blockquote .alert-info}

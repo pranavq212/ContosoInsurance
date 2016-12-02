@@ -33,6 +33,7 @@ category: SETUP
      Copy the **Server key (legacy token)**. 
 
      > **Note**: The **Sender ID** will be used on the **Settings** page of the Android App.
+     {: .blockquote .alert-info }
 
      > ![]({{site.baseurl}}/img/deployment/android-app-settings.png)
 
@@ -57,5 +58,6 @@ category: SETUP
      ![]({{site.baseurl}}/img/deployment/configure-notification-hub-apns.png)
 
      > **Note**: Make sure to select **Sandbox** if you created a development push certificate for development and testing. 	Otherwise, choose **Production**.
+     {: .blockquote .alert-info }
 
    - Click **Save**.
