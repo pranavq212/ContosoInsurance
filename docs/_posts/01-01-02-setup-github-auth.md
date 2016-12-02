@@ -13,7 +13,7 @@ category: SETUP
 1. Click **Generate Token**
 1. Enter a value in the **Token description** text box
 1. Select all the **check boxes**
-    ![image of GitHub Personal Access Tokens](/img/deployment/github-new-personal-access-token.png)
+    ![image of GitHub Personal Access Tokens](img/deployment/github-new-personal-access-token.png)
 1. Click **Generate token**
 1. Copy the token
 
@@ -25,5 +25,5 @@ category: SETUP
 1. Select **Read/Write** mode.
 1. Click **Edit**.
 1. Paste the token into the **token parameter**.
-    ![](/img/deployment/update-github-token-in-azure-resource-explorer.png)
+    ![](img/deployment/update-github-token-in-azure-resource-explorer.png)
 1. Click **PUT** 
