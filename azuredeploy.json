@@ -234,7 +234,7 @@
             "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
             "[resourceId('microsoft.insights/components/', variables('applicationInsightsName'))]",
             "[resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/', variables('notificationHubNamespaceName'), variables('notificationHubName'))]",
-            "[resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName')]"
+            "[resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName'))]"
           ],
           "properties": {
             "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
