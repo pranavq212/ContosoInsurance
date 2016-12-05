@@ -10,7 +10,7 @@ category: SETUP
 1. Fork this repository to your GitHub account
 1. Click the Deploy to Azure Button below
 
-   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fTylerLu%2fContosoInsurance%2fmaster%2fSrc%2fazuredeploy.json)
+   [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3a%2f%2fraw.githubusercontent.com%2fSyntaxC4-MSFT%2fContosoInsurance%2fmaster%2fSrc%2fazuredeploy.json)
 
 1. Fill in the values in the deployment page.
    ![]({{site.baseurl}}/img/deployment/azure-custom-deployment.png)
