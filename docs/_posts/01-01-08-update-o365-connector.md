@@ -2,6 +2,7 @@
 title: Authenticate the Office 365 API Connector
 description:
 category: SETUP
+optional: true
 ---
 
 {% include header.md %}

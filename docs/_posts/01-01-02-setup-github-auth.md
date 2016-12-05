@@ -2,6 +2,7 @@
 title: Manual GitHub Authentication
 description: 
 category: SETUP
+optional: true
 ---
 
 {% include header.md %}

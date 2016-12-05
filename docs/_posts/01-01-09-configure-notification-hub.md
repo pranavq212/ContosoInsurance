@@ -2,6 +2,7 @@
 title: Configure Notification Hub
 description:
 category: SETUP
+optional: true
 ---
 
 {% include header.md %}

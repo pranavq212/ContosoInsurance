@@ -16,5 +16,5 @@ The customer user accounts used to sign into the mobile app are Microsoft Accoun
   >```xml
   > <add key="AutoSeedUserData" value="true"/>
   >```
-  > If you change this app setting vale after you deploy the web api app and you deploy again with the ARM template then you will have to manually change it again.
+  > If you change this app setting value after you deploy the web api app and you deploy again with the ARM template then you will have to manually change it again.
   {: .blockquote .alert-info }

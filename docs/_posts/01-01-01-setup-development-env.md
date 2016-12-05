@@ -4,6 +4,7 @@ description:
 category: SETUP
 author: Cory Fowler
 author_github: syntaxc4
+optional: true
 ---
 
 {% include header.md %}

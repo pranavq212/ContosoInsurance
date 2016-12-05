@@ -52,7 +52,7 @@
                                     {% for doc in site.categories.SETUP reversed %}
 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}}</a>
+                                        <a class="nav-link" href="{{doc.url | prepend: site.baseurl}}">{{doc.title}} {% if doc.optional %}<small class="text-muted">(optional)</small>{% endif %}</a>
                                     </li>
 
                                     {% endfor %}
