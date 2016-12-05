@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Configure Notification Hub 
+{% include header.md %}
 
 1. Open the Notification Hub.
 

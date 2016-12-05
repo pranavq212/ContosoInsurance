@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Authenticate the Office 365 API Connection
+{% include header.md %}
 
 The Logic App uses an Office 365 API Connection to send email.  To authorize the Logic App to call the Office 365 API and send email, follow these steps.
 ​	

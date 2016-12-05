@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Create a Computer Vision Account
+{% include header.md %}
 
 1. Open [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services/en-us/sign-up) in your web browser.
 2. Click **Let's Go**

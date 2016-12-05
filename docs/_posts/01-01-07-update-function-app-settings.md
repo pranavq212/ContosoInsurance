@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Update the Contoso_ClaimAutoApproverUrl App Setting in the Function App
+{% include header.md %}
 
 1. In the list of components in the Resource Group the ARM template created (pictured above), click the **ContosoInsuranceClaimAutoApprover Logic App**.
 

@@ -4,7 +4,9 @@ description:
 category: DEMO
 ---
 
-# How To: Run the Android mobile client app for local execution and debugging on the Android simulator
+{% include header.md %}
+
+## How To: Run the Android mobile client app for local execution and debugging on the Android simulator
 
 1. Use Visual Studio 2015 to open the **src/Cloud/ContosoInsurance-Mobile.sln** Visual Studio Solution file.
    
@@ -14,7 +16,7 @@ category: DEMO
 3. Press **F5**.
 4. Observe the Android Simulator start and load the Contoso Insurance mobile app.
 
-# How To: Test Notifications on the Android simulator/device
+## How To: Test Notifications on the Android simulator/device
 
 > **Note:** Make sure [Google Play Service](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en "Google Play Service") has been installed on your Android simulator/device before testing notifications.
 {: .blockquote .alert-info}
@@ -34,7 +36,7 @@ category: DEMO
 
     ![]({{site.baseurl}}/img/deployment/android-display-notification.png)
 
-# How To: Take an new Picture on the Android simulator
+## How To: Take an new Picture on the Android simulator
 
 If you want to print out the demo images for license plates, insurance cards, and driver's licenses and use the simulator to take a picture of them, here's how to do it.
 

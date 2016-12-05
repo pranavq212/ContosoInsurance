@@ -2,9 +2,11 @@
 title: Configure your Development Environment
 description: 
 category: SETUP
+author: Cory Fowler
+author_github: syntaxc4
 ---
 
-# Configure your Development Environment
+{% include header.md %}
 
 Download and install the following tools to run, build and/or develop this application locally.
 

@@ -4,7 +4,9 @@ description:
 category: DEMO
 ---
 
-# How To: Run the iOS mobile client app for local execution and debugging on the iOS simulator##
+{% include header.md %}
+
+## How To: Run the iOS mobile client app for local execution and debugging on the iOS simulator##
 
 1. Use Visual Studio 2015 to open the **src/Cloud/ContosoInsurance-Mobile.sln** Visual Studio Solution file.
    1.Set up your Mac computer to act as a remote build machine.
@@ -29,7 +31,7 @@ category: DEMO
     1.Enter a **latitude** and **longitude**.
     2.Click **OK**.
 
-# How To: Test Notifications on iOS devices
+## How To: Test Notifications on iOS devices
 
 > **Note:** You must use a physical iOS device test notifications because the iOS simulator does not support push notifications.
 

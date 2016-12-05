@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Configure Authentication For Web Apps
+{% include header.md %}
 
 1. Configure the API App to use Microsoft Authentication
 

@@ -5,7 +5,7 @@ author: Cory Fowler
 category: DEMO
 ---
 
-# Track an individual claim
+{% include header.md %}
 
 Each claim has a CorrelationId associated with it.  You can see this in the screenshot above.  The CorrelationId is used to track the claims from the moment they are received from the mobile app until the end of the process.  You can track the flow of a single claim through the Azure components and the web application by using the CorrelationId.  Here's how to do it:
 

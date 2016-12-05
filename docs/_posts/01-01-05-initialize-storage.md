@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Initialize the Storage Account
+{% include header.md %}
 
 1. Get the name and key of the Storage Account.
 

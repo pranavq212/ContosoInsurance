@@ -5,7 +5,7 @@ author: Cory Fowler
 category: RESOURCES
 ---
 
-# Known Issues
+{% include header.md %}
 
 Here is a list of known issues in the Contoso Insurance Sample. If you believe you've found an issue which isn't listed here, please [submit an issue on GitHub](https://github.com/{{site.githubOrg}}/{{site.githubRepo}}/issues)
 

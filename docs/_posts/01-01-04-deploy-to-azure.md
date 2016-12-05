@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Deploy Contoso Insurance to Azure via ARM Template
+{% include header.md %}
 
 1. Check to ensure that the build is passing VSTS Build
 1. Fork this repository to your GitHub account

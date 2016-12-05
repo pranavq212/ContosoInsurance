@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Manual GitHub Authentication in Azure App Service
+{% include header.md %}
 
 ## Generate Token
 

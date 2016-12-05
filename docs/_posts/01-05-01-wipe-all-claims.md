@@ -4,7 +4,7 @@ description:
 category: CLEANUP
 ---
 
-# How To: Wipe all claims
+{% include header.md %}
 
 As you use the demo, many claims will accumulate in the databases and in the blob storage container.  To wipe the claims and reset the demo, perform the the following steps:
 

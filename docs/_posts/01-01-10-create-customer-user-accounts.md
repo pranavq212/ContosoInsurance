@@ -4,7 +4,7 @@ description:
 category: SETUP
 ---
 
-# Create Customer User Accounts
+{% include header.md %}
 
 The customer user accounts used to sign into the mobile app are Microsoft Accounts.  Each time you sign into the mobile app, the system checks to see if you have previously signed in with the Microsoft Account and proceeds like this:
 
