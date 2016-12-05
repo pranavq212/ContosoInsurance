@@ -233,14 +233,13 @@
             "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
             "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
             "[resourceId('microsoft.insights/components/', variables('applicationInsightsName'))]",
-            "[resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/', variables('notificationHubNamespaceName'), variables('notificationHubName'))]",
-            "[resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName'))]"
+            "[resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/', variables('notificationHubNamespaceName'), variables('notificationHubName'))]"
           ],
           "properties": {
             "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
             "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
             "MS_AzureStorageAccountConnectionString": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
-            "Contoso_ClaimAutoApproverUrl": "[listCallbackURL(concat(resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName')), '/triggers/manual'), '2016-06-01').value]",
+            "Contoso_ClaimAutoApproverUrl": "",
             "Contoso_ClaimsAdjusterEmail": "[parameters('claimsAdjusterEmail')]",
             "Contoso_ClaimDetailsPageBaseUrl": "[variables('claimDetailsPageBaseUrl')]",
             "MS_VisionServiceSubscriptionKey": "[parameters('visionServiceSubscriptionKey')]",
