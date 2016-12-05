@@ -64,6 +64,7 @@
   },
   "variables": {
     "location": "[resourceGroup().location]",
+    "AppInsightsLocation": "East US",
     "lowerSiteName": "[toLower(parameters('siteName'))]",
     "nameSuffix": "[substring(uniqueString(resourceGroup().id), 0, 6)]",
     "office365ConnectionName": "[concat(variables('lowerSiteName'), '-office365')]",
@@ -114,7 +115,7 @@
       "kind": "web",
       "name": "[variables('applicationInsightsName')]",
       "apiVersion": "2014-04-01",
-      "location": "Central US",
+      "location": "[variables('AppInsightsLocation')]",
       "properties": {
         "ApplicationId": "[variables('applicationInsightsName')]"
       }
