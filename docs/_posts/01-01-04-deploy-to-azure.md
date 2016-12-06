@@ -26,7 +26,8 @@ category: SETUP
 | ClaimsAdjusterEmail | Use an Office 365 Organization Account email address for this setting value. |
 {: .table .table-sm .table-striped}
 
-> **Note:** There are a few requirements for **ClaimsAdjusterEmail**
+> **Note:** There are a few requirements for **ClaimsAdjusterEmail** 
+> 
 > * This account must be a user in the Azure Active Directory associated with the Azure Subscription where you deploy the sample.  
 > * This account must also have an Office 365 license granted to it and an Exchange mailbox created so it can send and receive emails.  
 > * You will log into the web application with this account to play the role of the claims adjuster.
