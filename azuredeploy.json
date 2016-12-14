@@ -60,6 +60,36 @@
       "metadata": {
         "description": "https://www.microsoft.com/cognitive-services/en-us/computer-vision-api"
       }
+    },
+    "MSAClientId": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The Client Id provided when registering an application on https://apps.dev.microsoft.com"
+      }
+    },
+    "MSAClientSecret": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The Client Secret (Application Secret) generated for the app registered on https://apps.dev.microsoft.com"
+      }
+    },
+    "AADClientId": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The Client Id provided when creating an Application in Azure AD"
+      }
+    },
+    "AADClientSecret": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The Client Secret generated for the Application created in Azure AD"
+      }
+    },
+    "AADIssuerUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "The Issuer Url for your Azure AD Tenant"
+      }
     }
   },
   "variables": {
@@ -167,7 +197,7 @@
             "startIpAddress": "0.0.0.0",
             "endIpAddress": "0.0.0.0"
           },
-          "resources": [ ],
+          "resources": [],
           "dependsOn": [
             "[resourceId('Microsoft.Sql/servers', variables('sqlServerName'))]"
           ]
@@ -306,7 +336,7 @@
           "contentVersion": "1.0.0.0",
           "parameters": {
             "$connections": {
-              "defaultValue": { },
+              "defaultValue": {},
               "type": "Object"
             }
           },
@@ -423,7 +453,7 @@
                   }
                 },
                 "TrackCustomEvent_-_Claim_Auto_Approved": {
-                  "runAfter": { },
+                  "runAfter": {},
                   "type": "Function",
                   "inputs": {
                     "body": {
@@ -507,7 +537,7 @@
                     }
                   },
                   "TrackCustomEvent_-_Claim_Auto_Rejected": {
-                    "runAfter": { },
+                    "runAfter": {},
                     "type": "Function",
                     "inputs": {
                       "body": {
@@ -572,7 +602,7 @@
               }
             },
             "TrackCustomEvent_-_Auto_Approval_Started": {
-              "runAfter": { },
+              "runAfter": {},
               "type": "Function",
               "inputs": {
                 "body": {
@@ -594,7 +624,7 @@
               }
             }
           },
-          "outputs": { }
+          "outputs": {}
         },
         "parameters": {
           "$connections": {
@@ -625,7 +655,7 @@
           "contentVersion": "1.0.0.0",
           "parameters": {
             "$connections": {
-              "defaultValue": { },
+              "defaultValue": {},
               "type": "Object"
             }
           },
@@ -672,7 +702,7 @@
           },
           "actions": {
             "HandleManualClaim": {
-              "runAfter": { },
+              "runAfter": {},
               "type": "Function",
               "inputs": {
                 "body": "@triggerBody()",
@@ -684,7 +714,7 @@
             "Is_Claim_Approved": {
               "actions": {
                 "Push_Manual_Approved_Notification": {
-                  "runAfter": { },
+                  "runAfter": {},
                   "type": "Function",
                   "inputs": {
                     "body": {
@@ -763,7 +793,7 @@
               "else": {
                 "actions": {
                   "Push_Manual_Rejected_Notification": {
-                    "runAfter": { },
+                    "runAfter": {},
                     "type": "Function",
                     "inputs": {
                       "body": {
@@ -900,6 +930,27 @@
         {
           "apiVersion": "2015-08-01",
           "type": "config",
+          "name": "authsettings",
+          "properties": {
+            "enabled": true,
+            "unauthenticatedClientAction": 1,
+            "microsoftAccountClientId": "[parameters('MSAClientId')]",
+            "microsoftAccountClientSecret": "[parameters('MSAClientSecret')]",
+            "microsoftAccountOAuthScopes": [
+              "wl.offline_access",
+              "wl.signin",
+              "wl.emails"
+            ]
+          },
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'))]",
+            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'), 'config/appsettings')]",
+            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'), 'config/sourcecontrols')]"
+          ]
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "type": "config",
           "name": "connectionstrings",
           "dependsOn": [
             "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'))]",
@@ -999,6 +1050,31 @@
             "branch": "[parameters('sourceCodeBranch')]",
             "IsManualIntegration": "[parameters('sourceCodeManualIntegration')]"
           }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "type": "config",
+          "name": "authsettings",
+          "properties": {
+            "enabled": true,
+            "tokenStoreEnabled": true,
+            "defaultProvider": 0,
+            "unauthenticatedClientAction": 0,
+            "clientId": "[parameters('AADClientId')]",
+            "clientSecret": "[parameters('AADClientSecret')]",
+            "aadClientId": "[parameters('AADClientId')]",
+            "openIdIssuer": "[parameters('AADIssuerUrl')]",
+            "issuer": "[parameters('AADIssuerUrl')]",
+            "allowedAudiences": [
+              "[concat('https://', variables('webSiteName'), '.azurewebsites.net')]"
+            ],
+            "isAadAutoProvisioned": false
+          },
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites/', variables('webSiteName'))]",
+            "[resourceId('Microsoft.Web/sites/', variables('webSiteName'), 'config/appsettings')]",
+            "[resourceId('Microsoft.Web/sites/', variables('webSiteName'), 'config/sourcecontrols')]"
+          ]
         }
       ],
       "dependsOn": [
