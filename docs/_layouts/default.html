@@ -28,7 +28,7 @@
     <title>{% if page.title %} {{ page.title }} - {% endif %}{{ site.sample}} Sample Documentation</title>
 </head>
 
-<body>
+<body class="bg-faded">
     <nav class="navbar navbar-full navbar-dark bg-primary">
         <h1 class="navbar-brand mb-0">{{ site.sample }} <small>Documentation</small></h1>
         <span class="float-xs-right">
@@ -36,9 +36,9 @@
             <a class="github-button" href="https://github.com/{{ site.githubOrg }}/{{ site.githubRepo }}/fork" data-count-href="/{{ site.githubOrg }}/{{ site.githubRepo }}/network" data-count-api="/repos/{{ site.githubOrg }}/{{ site.githubRepo }}#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork {{ site.githubOrg }}/{{ site.githubRepo }} on GitHub">Fork</a>
         </span>
     </nav>
-    <div class="container">
+    <div class="container bg-faded">
         <div class="row">
-            <div class="col-lg-4 bg-faded">
+            <div class="col-lg-4">
                 <div id="accordion" role="tablist" aria-multiselectable="true">
                     <div class="card">
                         <div class="card-header" role="tab" id="SetupHeading">
@@ -147,7 +147,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 clean">
                 {{ content }}
             </div>
         </div>

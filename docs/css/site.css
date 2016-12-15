@@ -19,3 +19,8 @@ img {
 .blockquote {
     font-size: 1rem;
 }
+
+.clean {
+    background: #fff;
+    padding-top: 15px;
+}

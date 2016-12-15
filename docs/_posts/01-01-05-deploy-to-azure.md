@@ -23,6 +23,11 @@ category: SETUP
 | SourceCodeRepositoryURL | Use the repository you just forked. |
 | SourceCodeManualIntegration | If deploying from the main repo, use true for ManualIntegration, otherwise use false. This parameter controls whether or not a webhook is created when you deploy. If you don't have permissions to the repo and it tries to create a webhook (i.e., ManualIntegration is false, then deployment will fail). |
 | VisionServiceSubscriptionKey | Use one of the Computer Vision Services keys you just created. |
+| MSAClientId | Microsoft Application ID (see [Setup Authentication Providers]({{ site.baseurl }}/setup/2001/01/02/setup-auth-providers.html) |
+| MSAClientSecret | Client Secret (Application Secret) from the Application above |
+| AADClientId | Azure Active Directory Client ID (see [Setup Authentication Providers]({{ site.baseurl }}/setup/2001/01/02/setup-auth-providers.html)) |
+| AADClientSecret | Client Secret from the Azure Active Directory Application above |
+| AADIssuerUrl | Issuer Url of the Azure Active Directory Application above |
 | ClaimsAdjusterEmail | Use an Office 365 Organization Account email address for this setting value. |
 {: .table .table-sm .table-striped}
 

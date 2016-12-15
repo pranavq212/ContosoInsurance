@@ -930,27 +930,6 @@
         {
           "apiVersion": "2015-08-01",
           "type": "config",
-          "name": "authsettings",
-          "properties": {
-            "enabled": true,
-            "unauthenticatedClientAction": 1,
-            "microsoftAccountClientId": "[parameters('MSAClientId')]",
-            "microsoftAccountClientSecret": "[parameters('MSAClientSecret')]",
-            "microsoftAccountOAuthScopes": [
-              "wl.offline_access",
-              "wl.signin",
-              "wl.emails"
-            ]
-          },
-          "dependsOn": [
-            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'))]",
-            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'), 'config/appsettings')]",
-            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'), 'config/sourcecontrols')]"
-          ]
-        },
-        {
-          "apiVersion": "2015-08-01",
-          "type": "config",
           "name": "connectionstrings",
           "dependsOn": [
             "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'))]",
@@ -982,7 +961,27 @@
             "branch": "[parameters('sourceCodeBranch')]",
             "IsManualIntegration": "parameters('sourceCodeManualIntegration')]"
           }
-        }
+        },
+        {
+          "apiVersion": "2015-08-01",
+          "type": "config",
+          "name": "authsettings",
+          "properties": {
+            "enabled": true,
+            "unauthenticatedClientAction": 1,
+            "microsoftAccountClientId": "[parameters('MSAClientId')]",
+            "microsoftAccountClientSecret": "[parameters('MSAClientSecret')]",
+            "microsoftAccountOAuthScopes": [
+              "wl.offline_access",
+              "wl.signin",
+              "wl.emails"
+            ]
+          },
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/sites/', variables('apiSiteName'))]",
+            "[resourceId('Microsoft.Web/sites/config', variables('apiSiteName'), 'appsettings')]"
+          ]
+        },
       ],
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
@@ -1072,8 +1071,7 @@
           },
           "dependsOn": [
             "[resourceId('Microsoft.Web/sites/', variables('webSiteName'))]",
-            "[resourceId('Microsoft.Web/sites/', variables('webSiteName'), 'config/appsettings')]",
-            "[resourceId('Microsoft.Web/sites/', variables('webSiteName'), 'config/sourcecontrols')]"
+            "[resourceId('Microsoft.Web/sites/config', variables('webSiteName'), 'appsettings')]"
           ]
         }
       ],
