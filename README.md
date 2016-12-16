@@ -38,7 +38,7 @@ The sample also demonstrates how to use other technologies including:
 
 ## Documentation
 
-See [Contoso Insurance Documentation](https://syntaxc4-msft.github.io/ContosoInsurance).
+See [Contoso Insurance Documentation](https://azure-samples.github.io/ContosoInsurance).
 
 
 ## Disclaimer
