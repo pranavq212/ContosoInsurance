@@ -1,5 +1,5 @@
 sample: Contoso Insurance
-githubOrg: syntaxc4-msft
+githubOrg: azure-samples
 githubRepo: ContosoInsurance
 markdown: kramdown
 highlighter: rouge
