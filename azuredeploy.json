@@ -31,7 +31,7 @@
     },
     "sourceCodeRepositoryURL": {
       "type": "string",
-      "defaultValue": "https://github.com/azure-appservice-samples/ContosoInsurance",
+      "defaultValue": "https://github.com/azure-samples/ContosoInsurance",
       "metadata": {
         "description": "Source code repository URL"
       }
