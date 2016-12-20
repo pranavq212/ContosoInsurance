@@ -24,3 +24,7 @@ img {
     background: #fff;
     padding-top: 15px;
 }
+
+dl > dd {
+    padding-left: 40px;
+}

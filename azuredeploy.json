@@ -252,7 +252,11 @@
         "name": "[variables('functionAppName')]",
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
         "siteConfig": {
-          "AlwaysOn": true
+          "AlwaysOn": true,
+          "appSettings": [
+            { "name": "COMMAND", "value": "src\\Cloud\\ContosoInsurance.Function\\deploy.cmd" },
+            { "name": "FUNCTIONS_EXTENSION_VERSION", "value": "~1" }
+          ]
         }
       },
       "resources": [
@@ -262,23 +266,23 @@
           "name": "appsettings",
           "dependsOn": [
             "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
+            "[resourceId('Microsoft.Web/sites/sourcecontrols', variables('functionAppName'), 'web')]",
             "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
             "[resourceId('microsoft.insights/components/', variables('applicationInsightsName'))]",
+            "[resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName'))]",
             "[resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/', variables('notificationHubNamespaceName'), variables('notificationHubName'))]"
           ],
           "properties": {
             "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
             "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
             "MS_AzureStorageAccountConnectionString": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('storageAccountName'),';AccountKey=',listkeys(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-05-01-preview').key1,';')]",
-            "Contoso_ClaimAutoApproverUrl": "",
+            "Contoso_ClaimAutoApproverUrl": "[listCallbackURL(concat(resourceId('Microsoft.Logic/workflows/', variables('claimAutoApproverName')), '/triggers/manual'), '2016-06-01').value]",
             "Contoso_ClaimsAdjusterEmail": "[parameters('claimsAdjusterEmail')]",
             "Contoso_ClaimDetailsPageBaseUrl": "[variables('claimDetailsPageBaseUrl')]",
             "MS_VisionServiceSubscriptionKey": "[parameters('visionServiceSubscriptionKey')]",
             "MS_ApplicationInsightsInstrumentationKey": "[reference(concat('microsoft.insights/components/', variables('applicationInsightsName'))).InstrumentationKey]",
             "MS_NotificationHubName": "[variables('notificationHubName')]",
-            "MS_NotificationHubConnectionString": "[listkeys(resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules', variables('notificationHubNamespaceName'), variables('notificationHubName'), 'DefaultFullSharedAccessSignature'), '2014-09-01').primaryConnectionString]",
-            "FUNCTIONS_EXTENSION_VERSION": "latest",
-            "command": "src\\Cloud\\ContosoInsurance.Function\\deploy.cmd"
+            "MS_NotificationHubConnectionString": "[listkeys(resourceId('Microsoft.NotificationHubs/namespaces/notificationHubs/authorizationRules', variables('notificationHubNamespaceName'), variables('notificationHubName'), 'DefaultFullSharedAccessSignature'), '2014-09-01').primaryConnectionString]"
           }
         },
         {
@@ -286,7 +290,8 @@
           "type": "config",
           "name": "connectionstrings",
           "dependsOn": [
-            "[concat('Microsoft.Web/sites/', variables('functionAppName'))]",
+            "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
+            "[resourceId('Microsoft.Web/sites/sourcecontrols/', variables('functionAppName'), 'web')]",
             "[resourceId('Microsoft.Sql/servers/', variables('sqlServerName'))]"
           ],
           "properties": {
@@ -305,23 +310,17 @@
           "name": "web",
           "type": "sourcecontrols",
           "dependsOn": [
-            "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
-            "[resourceId('Microsoft.Web/Sites/config', variables('functionAppName'), 'appsettings')]",
-            "[resourceId('Microsoft.Web/Sites/config', variables('functionAppName'), 'connectionstrings')]"
+            "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]"
           ],
           "properties": {
             "RepoUrl": "[parameters('sourceCodeRepositoryURL')]",
             "branch": "[parameters('sourceCodeBranch')]",
-            "IsManualIntegration": "parameters('sourceCodeManualIntegration')]"
+            "IsManualIntegration": "[parameters('sourceCodeManualIntegration')]"
           }
         }
       ],
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]",
-        "[resourceId('microsoft.insights/components/', variables('applicationInsightsName'))]",
-        "[resourceId('Microsoft.Sql/servers/', variables('sqlServerName'))]",
-        "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-        "[resourceId('Microsoft.NotificationHubs/namespaces/', variables('notificationHubNamespaceName'))]"
+        "[resourceId('Microsoft.Web/serverFarms/', parameters('hostingPlanName'))]"
       ]
     },
     {
@@ -639,8 +638,8 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/connections', variables('office365ConnectionName'))]",
-        "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]",
-        "[resourceId('Microsoft.Web/Sites/sourcecontrols', variables('functionAppName'), 'web')]"
+        "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
+        "[resourceId('Microsoft.Web/sites/sourcecontrols', variables('functionAppName'), 'web')]"
       ]
     },
     {
@@ -894,8 +893,8 @@
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/connections', variables('office365ConnectionName'))]",
-        "[resourceId('Microsoft.Web/sites', variables('functionAppName'))]",
-        "[resourceId('Microsoft.Web/Sites/sourcecontrols', variables('functionAppName'), 'web')]"
+        "[resourceId('Microsoft.Web/sites/', variables('functionAppName'))]",
+        "[resourceId('Microsoft.Web/sites/sourcecontrols', variables('functionAppName'), 'web')]"
       ]
     },
     {
@@ -959,7 +958,7 @@
           "properties": {
             "RepoUrl": "[parameters('sourceCodeRepositoryURL')]",
             "branch": "[parameters('sourceCodeBranch')]",
-            "IsManualIntegration": "parameters('sourceCodeManualIntegration')]"
+            "IsManualIntegration": "[parameters('sourceCodeManualIntegration')]"
           }
         },
         {
