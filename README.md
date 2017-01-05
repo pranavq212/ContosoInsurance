@@ -15,6 +15,7 @@ Contoso Insurance is a Mobile-First, Cloud-First solution. It requires the use o
 
 See [Contoso Insurance Documentation](https://azure-samples.github.io/ContosoInsurance).
 
+A demo walk-through was presented at [Microsoft Ignite](https://ignite.microsoft.com), see the video [Understand the future of software development in the cloud with the Azure Application Platform](https://channel9.msdn.com/Events/Ignite/2016/BRK2085-TS)
 
 ## Disclaimer
 
