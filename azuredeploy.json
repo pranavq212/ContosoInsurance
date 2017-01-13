@@ -968,6 +968,8 @@
           "properties": {
             "enabled": true,
             "unauthenticatedClientAction": 1,
+            "tokenStoreEnabled": true,
+            "defaultProvider": 0,
             "microsoftAccountClientId": "[parameters('MSAClientId')]",
             "microsoftAccountClientSecret": "[parameters('MSAClientSecret')]",
             "microsoftAccountOAuthScopes": [
