@@ -22,7 +22,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Contoso Insurance</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.contoso.ContosoInsurance</string>
+	<string>com.microsoft.ContosoInsurance</string>
 	<key>CFBundleVersion</key>
 	<string>1.1</string>
 	<key>CFBundleIconFiles</key>
